@@ -7,7 +7,12 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.oneplus.hardware.display@1.0-service \
     vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.pixelworks.hardware.display.iris-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.qti.hardware.display.composer-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.display.composer-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/ppd:$(TARGET_COPY_OUT_VENDOR)/bin/ppd \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -32,6 +37,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/segment.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/segment.dlc \
     vendor/oneplus/kebab/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     vendor/oneplus/kebab/proprietary/vendor/etc/init/calibrationOutput_uw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/calibrationOutput_uw.rc \
+    vendor/oneplus/kebab/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/oneplus/kebab/proprietary/vendor/etc/init/vendor.oneplus.hardware.display@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.oneplus.hardware.display@1.0-service.rc \
+    vendor/oneplus/kebab/proprietary/vendor/etc/init/vendor.pixelworks.hardware.display.iris-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.pixelworks.hardware.display.iris-service.rc \
+    vendor/oneplus/kebab/proprietary/vendor/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm1.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm1.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm10.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm10.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm11.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm11.txt \
@@ -50,6 +59,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm7.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm7.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm8.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm8.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm9.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm9.txt \
+    vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/mcfCheck.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/mcfCheck.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/irissoft.fw:$(TARGET_COPY_OUT_VENDOR)/etc/irissoft.fw \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0_crt.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0_crt.json \
@@ -299,11 +309,49 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/lib64/hw/goodix.fod.kona.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/goodix.fod.kona.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/hw/goodix.g6.fod.kona.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/goodix.g6.fod.kona.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libarm_proxy_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarm_proxy_skel.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisp-aba.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdisplayqos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayqos.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdisplayskuutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayskuutils.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libgf_g6_ud_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_g6_ud_hal.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libgf_ud_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_ud_hal.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libhvx_proxy_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhvx_proxy_stub.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirisIoctlWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirisIoctlWrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirisPCS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirisPCS.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwiriscalibrate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwiriscalibrate.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirisfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirisfeature.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirishalwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirishalwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirispq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirispq.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirisservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirisservice.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwirissoft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirissoft.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwsnapdragoncolor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwsnapdragoncolor.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libpwsoftirisPCS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwsoftirisPCS.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libqseed3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqseed3.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdedrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdedrm.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-color.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdm-colormgr-algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-colormgr-algo.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-diag.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdm-disp-vndapis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-disp-vndapis.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdmcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmcore.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsdmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.3.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.display@1.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.display@1.1.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.feature@1.0.so
+
+PRODUCT_PACKAGES += \
+    vendor.pixelworks.hardware.display.iris-service \
+    vendor.pixelworks.hardware.feature.irisfeature-service
